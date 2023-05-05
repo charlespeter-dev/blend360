@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <title>
+        Engineering Life @ Blend360
+    </title>
+
+
+    <style>
+        body {
+            --bs-gutter-x: 0;
+            --bs-body-font-family: 'Montserrat', sans-serif;
+            --bs-body-font-size: 18px;
+            --bs-body-font-weight: 400;
+            --bs-body-line-height: 28px;
+            --bs-body-color: #000000;
+            --bs-body-text-align: left;
+            --bs-body-bg: #ffffff;
+
+            font-family: var(--bs-body-font-family);
+            font-size: var(--bs-body-font-size);
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            color: var(--bs-body-color);
+            text-align: var(--bs-body-text-align);
+            background-color: var(--bs-body-bg);
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none !important;
+            color: #2e2e7b !important;
+        }
+
+        header {
+            background-color: transparent;
+            color: #FFFFFF;
+            padding: 30px;
+            position: relative;
+            height: 500px;
+        }
+
+        header::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: calc((100vw - 100%) / -2);
+            width: 100vw;
+            height: 100%;
+            /* background-image: url('https://info.blend360.com/hubfs/2X/TAO_event_lp/blend360_tableau-cvs-dinner_banner_%5Bm%5D.jpg'); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50%;
+            z-index: -1;
+        }
+
+        @media screen and (min-width: 992px) {
+            header::before {
+                background-image: url('https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Engineering%20Life%20@%20Blend360%20Banner.jpg');
+                background-position: 0 20%;
+            }
+
+            header {
+                height: unset;
+            }
+        }
+
+        header::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: calc((100vw - 100%) / -2);
+            width: 100vw;
+            border: none;
+            border-bottom: 10px solid #11B7BF;
+        }
+
+        .color-blue {
+            color: #3898EC;
+        }
+
+        .color-black {
+            color: #000000;
+        }
+
+        .blue-box {
+            background-color: #ECF3FA;
+            box-shadow: 4px 6px 10px 1px #AAA0A036;
+        }
+
+        .blue-box img {
+            padding-block-start: 1rem;
+            padding-block-end: 1rem;
+            padding-inline-start: 1rem;
+        }
+
+        .blue-box p {
+            margin: 0;
+            padding-inline-start: 1rem;
+            padding-inline-end: 2rem;
+
+            color: #08083B;
+        }
+
+        .divider {
+            border-bottom: .5px solid #C9C9C9;
+            margin-block: 3rem;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #ECF3FA;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: calc((100vw - 100%) / -2);
+            width: 100vw;
+            border: none;
+            border-bottom: 10px solid #11B7BF;
+        }
+
+        footer::after {
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: calc((100vw - 100%) / -2);
+            width: 100vw;
+            background-color: #ECF3FA;
+        }
+
+        footer a {
+            font-weight: 600;
+            text-decoration: underline !important;
+        }
+
+        h1 {
+            color: #FFFFFF;
+            font-size: 48px;
+            line-height: 58px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 36px;
+            line-height: 44px;
+            font-weight: 700;
+            color: #08083B;
+        }
+
+        h3 {
+            font-size: 21px;
+            line-height: 25px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        b,
+        strong {
+            font-weight: 700;
+            font-size: 21px;
+            line-height: 25px;
+        }
+
+        hr {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        @media screen and (min-width: 992px) {
+
+            body {
+                overflow-x: hidden;
+            }
+
+            span.br-before::before {
+                content: "\a";
+                white-space: pre;
+            }
+
+            span.br-after::after {
+                content: "\a";
+                white-space: pre;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+
+            <a href="https://www.blend360.com/" target="_blank">
+                <img class="pt-5 pb-4" src="https://info.blend360.com/hubfs/2X/TAO_event_lp/Group%2031.svg" alt="">
+            </a>
+
+            <h1 class="py-4">
+                <span class="color-blue">Engineering</span>
+                <span class="br-before">
+                    <span class="color-blue">Life</span> <span class="color-black">@ Blend360</span>
+                </span>
+            </h1>
+
+        </header>
+
+        <main>
+            <div class="row py-4">
+
+                <div class="col-lg-8 mx-auto">
+
+                    <section>
+                        <p>
+                            <strong>
+                                As you think about work, what differentiates a good career from an ok job. What will
+                                engage you, make you feel like you are making a difference and learning every day. What
+                                drags you down versus what builds you up and makes work something you look forward to.
+                            </strong>
+                        </p>
+
+                        <p>
+                            This at Blend360 is a big deal, because our work is our product. Delivering quality
+                            solutions for clients is our success, and to do that we need you, and we need you growing
+                            your skills and thriving in your role. We can’t accept anything less than helping you do
+                            innovative work and keeping your skills ahead of the curve – the more productive you can be,
+                            the more collaboration with talented peers, and more teams and projects you experience, the
+                            more you can be a true expert in your field.
+                        </p>
+
+                        <p>
+                            So that’s our view of engineering life at Blend360 – we need enable you to learn both
+                            formally through training and certifications, and informally through different clients and
+                            different projects, with a team of colleagues you respect.
+                        </p>
+
+                        <p>
+                            At Blend360 we have all the ingredients to enable you to build a great career, we respect
+                            growth in technical depth and breadth, as well as delivery leadership. Our clients have
+                            demand for more expertise doing great work than there are people in the market – so we know
+                            we have room for you and what you want to accomplish in your career. Your promotions aren’t
+                            limited by our org structure, but enabled by your skills and growth.
+                        </p>
+                    </section>
+
+                    <div class="divider"></div>
+
+                    <section>
+                        <p>
+                            <strong>
+                                Here’s what we are currently doing to make this happen – but it’s never finished we want
+                                to keep going and improving and want you to come and help:
+                            </strong>
+                        </p>
+                    </section>
+
+                    <section>
+
+                        <div class="row gy-4 py-4">
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Choice of computer hardware – your primary interface to your job should be
+                                        hardware you love
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Access to several technical training platforms
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Internal training programs
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Regular knowledge sharing (both in engineering teams and company wide)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Management training on how to manage people
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Certifications - We pay for tests Regular certifications challenges with bonus
+                                        recognition
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Ad hoc ability to recognize colleagues companywide (and be recognized) for great
+                                        work
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Quarterly awards for outstanding contributions
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Project teams set goals and celebrations for success
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Blend360 celebrates successes! You can even nominate people for recognition
+                                        every week to thank them for their support.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div
+                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
+                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                        alt="">
+                                    <p>
+                                        Team building events like go carting, laser tag, cooking classes, sporting
+                                        events, and even axe throwing
+                                    </p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </section>
+
+                    <div class="divider"></div>
+
+                    <section>
+                        <p>
+                            <strong>
+                                So, now you know Blend360 is excited and committed to helping you grow – what’s it like
+                                to work at Blend360?
+                            </strong>
+                        </p>
+                    </section>
+
+                    <section>
+                        <div class="row gy-4 py-4">
+
+                            <div class="col-lg-6">
+                                <div class="card h-100 team border-0">
+                                    <div class="py-3">
+                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%201.png"
+                                            class="img-fluid" alt="">
+                                    </div>
+                                    <h3>
+                                        Team #1
+                                    </h3>
+                                    <p>
+                                        You typically have a single client project at a time and are part of a project
+                                        team – solving important challenges for a client. This is where you will spend
+                                        most of your time, but projects will change over time (based on scope and your
+                                        career needs)
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card h-100 team border-0">
+                                    <div class="py-3">
+                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%202.png"
+                                            class="img-fluid" alt="">
+                                    </div>
+                                    <h3>
+                                        Team #2
+                                    </h3>
+                                    <p>
+                                        You are part of the broader engineering team, sharing expertise and helping
+                                        interview and mentor, and being mentored
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card h-100 team border-0">
+                                    <div class="py-3">
+                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%203.png"
+                                            class="img-fluid" alt="">
+                                    </div>
+                                    <h3>
+                                        Team #3
+                                    </h3>
+                                    <p>
+                                        You choose your manager from within the engineering team – ensuring you have a
+                                        great connection and confidence in your career support
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card h-100 team border-0">
+                                    <div class="py-3">
+                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%204.png"
+                                            class="img-fluid" alt="">
+                                    </div>
+                                    <h3>
+                                        Team #4
+                                    </h3>
+                                    <p>
+                                        Blend360 is an incredible team of talented people, we all are your network and
+                                        team to help you succeed.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </section>
+
+
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer class="p-4">
+            <div class="pb-4">
+                <a href="https://www.blend360.com/" target="_blank">
+                    <img src="https://info.blend360.com/hubfs/2X/TAO_event_lp/Group%2031.svg" alt="">
+                </a>
+            </div>
+            <p>
+                Copyright © 2023 Blend360. All Rights Reserved.
+            </p>
+
+            <div>
+                <a href="https://www.blend360.com/" target="_blank">View Our Website</a> | <a
+                    href="https://www.blend360.com/privacy-policy/" target="_blank">Privacy Policy</a>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
