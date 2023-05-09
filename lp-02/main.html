@@ -50,7 +50,7 @@
             color: #FFFFFF;
             padding: 30px;
             position: relative;
-            height: 500px;
+            height: 900px;
         }
 
         header::before {
@@ -61,7 +61,7 @@
             left: calc((100vw - 100%) / -2);
             width: 100vw;
             height: 100%;
-            /* background-image: url('https://info.blend360.com/hubfs/2X/TAO_event_lp/blend360_tableau-cvs-dinner_banner_%5Bm%5D.jpg'); */
+            background-image: url('https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd36580c4b8e0b962ef3_76%20Mobile%20Heaer.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 50%;
@@ -70,12 +70,16 @@
 
         @media screen and (min-width: 992px) {
             header::before {
-                background-image: url('https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Engineering%20Life%20@%20Blend360%20Banner.jpg');
+                background-image: url('https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd0741c323e4fdc33fbe_Engineering%20Life%20%40%20Blend360%20Banner.jpg');
                 background-position: 0 20%;
             }
 
             header {
-                height: unset;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                height: 500px;
             }
         }
 
@@ -101,12 +105,26 @@
         .blue-box {
             background-color: #ECF3FA;
             box-shadow: 4px 6px 10px 1px #AAA0A036;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media screen and (min-width: 992px) {
+            .blue-box {
+                flex-direction: row;
+                align-items: center;
+            }
         }
 
         .blue-box img {
             padding-block-start: 1rem;
             padding-block-end: 1rem;
             padding-inline-start: 1rem;
+
+            width: 76px;
+            height: auto;
         }
 
         .blue-box p {
@@ -119,7 +137,7 @@
 
         .divider {
             border-bottom: .5px solid #C9C9C9;
-            margin-block: 3rem;
+            margin-block: 4rem;
         }
 
         .team {
@@ -226,10 +244,12 @@
         <header>
 
             <a href="https://www.blend360.com/" target="_blank">
-                <img class="pt-5 pb-4" src="https://info.blend360.com/hubfs/2X/TAO_event_lp/Group%2031.svg" alt="">
+                <img class="pb-4"
+                    src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd7baf40ddee0e2cbb67_Group%2031.svg"
+                    alt="">
             </a>
 
-            <h1 class="py-4">
+            <h1 class="pt-4">
                 <span class="color-blue">Engineering</span>
                 <span class="br-before">
                     <span class="color-blue">Life</span> <span class="color-black">@ Blend360</span>
@@ -239,7 +259,7 @@
         </header>
 
         <main>
-            <div class="row py-4">
+            <div class="row py-4 mt-4">
 
                 <div class="col-lg-8 mx-auto">
 
@@ -292,9 +312,8 @@
                         <div class="row gy-4 py-4">
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Choice of computer hardware – your primary interface to your job should be
@@ -304,9 +323,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Access to several technical training platforms
@@ -315,9 +333,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Internal training programs
@@ -326,9 +343,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Regular knowledge sharing (both in engineering teams and company wide)
@@ -337,9 +353,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Management training on how to manage people
@@ -348,9 +363,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Certifications - We pay for tests Regular certifications challenges with bonus
@@ -360,9 +374,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Ad hoc ability to recognize colleagues companywide (and be recognized) for great
@@ -372,9 +385,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Quarterly awards for outstanding contributions
@@ -383,9 +395,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Project teams set goals and celebrations for success
@@ -394,9 +405,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Blend360 celebrates successes! You can even nominate people for recognition
@@ -406,9 +416,8 @@
                             </div>
 
                             <div class="col-lg-6">
-                                <div
-                                    class="card h-100 blue-box border-0 rounded-4 d-flex flex-row align-items-center py-5">
-                                    <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Tick%20Icon.png"
+                                <div class="card h-100 blue-box border-0 rounded-4 py-5">
+                                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd072ba20896c938cb0e_Tick%20Icon.png"
                                         alt="">
                                     <p>
                                         Team building events like go carting, laser tag, cooking classes, sporting
@@ -439,7 +448,7 @@
                             <div class="col-lg-6">
                                 <div class="card h-100 team border-0">
                                     <div class="py-3">
-                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%201.png"
+                                        <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd06af40dd41a82cacb6_Icon%201.png"
                                             class="img-fluid" alt="">
                                     </div>
                                     <h3>
@@ -457,7 +466,7 @@
                             <div class="col-lg-6">
                                 <div class="card h-100 team border-0">
                                     <div class="py-3">
-                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%202.png"
+                                        <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd078cfb32032db1197b_Icon%202.png"
                                             class="img-fluid" alt="">
                                     </div>
                                     <h3>
@@ -473,7 +482,7 @@
                             <div class="col-lg-6">
                                 <div class="card h-100 team border-0">
                                     <div class="py-3">
-                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%203.png"
+                                        <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd075d571430d37150b1_Icon%203.png"
                                             class="img-fluid" alt="">
                                     </div>
                                     <h3>
@@ -489,7 +498,7 @@
                             <div class="col-lg-6">
                                 <div class="card h-100 team border-0">
                                     <div class="py-3">
-                                        <img src="https://info.blend360.com/hubfs/2X/Engineering_Life_lp/Icon%204.png"
+                                        <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd0797bdab0f4bda1510_Icon%204.png"
                                             class="img-fluid" alt="">
                                     </div>
                                     <h3>
@@ -516,7 +525,8 @@
         <footer class="p-4">
             <div class="pb-4">
                 <a href="https://www.blend360.com/" target="_blank">
-                    <img src="https://info.blend360.com/hubfs/2X/TAO_event_lp/Group%2031.svg" alt="">
+                    <img src="https://uploads-ssl.webflow.com/60b7fc7cb0c05cd47f208a3d/6459cd7baf40ddee0e2cbb67_Group%2031.svg"
+                        alt="">
                 </a>
             </div>
             <p>
